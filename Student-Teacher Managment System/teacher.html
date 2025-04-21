@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teacher.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" onclick="showSection('schedule')">Schedule Appointment</a>
+        <a href="#" onclick="showSection('approve')">Approve/Cancel Appointments</a>
+        <a href="#" onclick="showSection('messages')">View Messages</a>
+        <a href="#" onclick="showSection('all')">All Appointments</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    
+      <div class="main">
+        <div id="appointmentsList" class="section"></div>
+        <div id="messagesList" class="section"></div>
+
+        <div id="schedule" class="section visible">
+          <h2>Schedule Appointment</h2>
+          <form id="scheduleForm">
+            <input type="date" id="date" required />
+            <input type="time" id="time" required />
+            <button type="submit">Add Slot</button>
+          </form>
+        </div>
+    
+        <div id="approve" class="section">
+          <h2>Pending Appointments</h2>
+          <div id="pendingList"></div>
+        </div>
+    
+        <div id="all" class="section">
+          <h2>All Appointments</h2>
+          <div id="allList"></div>
+        </div>
+    
+        <div id="messages" class="section">
+          <h2>Messages</h2>
+          <div id="msgList"></div>
+        </div>
+      </div>
+    
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+      <script src="teacher.js"></script>
+</body>
+</html>
+
+
+    

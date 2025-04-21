@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="#" onclick="showSection('searchTeacher')">Search Teacher</a>
+        <a href="#" onclick="showSection('bookAppointment')">Book Appointment</a>
+        <a href="#" onclick="showSection('sendMessage')">Send Message</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    
+      <div class="main">
+        <div id="searchTeacher" class="section visible">
+          <h2>Search Teacher</h2>
+          <input type="text" id="searchInput" placeholder="Search by name or subject" />
+          <button id="searchButton">Search</button>
+          <div id="teacherResults"></div>
+        </div>
+    
+        <div id="bookAppointment" class="section">
+          <h2>Book Appointment</h2>
+          <form id="appointmentForm">
+            <select id="teacherSelect" required></select>
+            <input type="date" id="appointmentDate" required />
+            <input type="time" id="appointmentTime" required />
+            <button type="submit">Book Appointment</button>
+          </form>
+        </div>
+    
+        <div id="sendMessage" class="section">
+          <h2>Send Message</h2>
+          <form id="messageForm">
+            <textarea id="messageInput" placeholder="Type your message here" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="student.js"></script>
+</body>
+</html>

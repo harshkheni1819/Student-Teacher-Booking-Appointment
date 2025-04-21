@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    nav button:hover {
+      background-color: #777;
+    }
+    .content {
+      padding: 2rem;
+    }
+    .section {
+      display: none;
+    }
+    .user-card {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .teacher-form {
+      margin: 1rem 0;
+      display: inline-block;
+    }
+    .teacher-form input, .teacher-form button {
+      margin-right: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('pending')">Pending Users</button>
+    <button onclick="showSection('all')">All Users</button>
+    <button onclick="showSection('teachers')">Manage Teachers</button>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="content">
+    <div id="pending" class="section">
+      <h2>Pending Users</h2>
+      <div id="pending-users"></div>
+    </div>
+    <div id="all" class="section">
+      <h2>All Users</h2>
+      <div id="all-users"></div>
+    </div>
+    <div id="teachers" class="section">
+      <h2>Manage Teachers</h2>
+      <div class="teacher-form">
+        <input type="text" id="t-name" placeholder="Full Name">
+        <input type="email" id="t-email" placeholder="Email">
+        <input type="text" id="t-dept" placeholder="Department">
+        <input type="text" id="t-subject" placeholder="Subject">
+        <button onclick="addTeacher()">Add Teacher</button>
+      </div>
+      <div id="teacher-list"></div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
