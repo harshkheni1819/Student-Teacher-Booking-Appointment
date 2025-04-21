@@ -1,0 +1,121 @@
+{
+  "student": {
+    "appointments": {
+      "-OO6dNNJvgPN9HIPcRvV": {
+        "date": "2025-04-18",
+        "status": "available",
+        "teacher": "yb22USx3HzL8ZsrTcPwpqxJZs2L2",
+        "time": "13:15"
+      },
+      "-OO6j9-pRa3481Cevr2P": {
+        "date": "2025-04-19",
+        "status": "pending",
+        "studentId": "SdwbpW8WRNUtymsb8VR3GAHqHcw2",
+        "teacherId": "-ONsSojFc9LH_hn7Bzhp",
+        "time": "12:44"
+      },
+      "-OO7Hy-hyxO-AHtGaud0": {
+        "date": "2025-04-18",
+        "status": "pending",
+        "studentId": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "teacherId": "fXFqnMsyOgXPIILe0WpoVmoAIrj1",
+        "time": "15:19"
+      },
+      "-OO7I3uww2kO3afcNPmC": {
+        "date": "2025-04-18",
+        "status": "available",
+        "teacher": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "time": "15:19"
+      },
+      "-OO7Ki3m-BsRmrThHGoB": {
+        "date": "2025-04-18",
+        "status": "pending",
+        "studentId": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "teacherId": "fXFqnMsyOgXPIILe0WpoVmoAIrj1",
+        "time": "16:33"
+      },
+      "-OO7N0if0VUUJlHFiAPV": {
+        "date": "2025-04-18",
+        "status": "pending",
+        "studentId": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "teacherId": "fXFqnMsyOgXPIILe0WpoVmoAIrj1",
+        "time": "15:42"
+      },
+      "-OOLaHG9JPnYSv1jJ4Gt": {
+        "date": "2025-04-22",
+        "status": "approved",
+        "studentId": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "teacherId": "fXFqnMsyOgXPIILe0WpoVmoAIrj1",
+        "time": "10:00"
+      },
+      "-OOLafF1UOkNzaPzkejz": {
+        "date": "2025-04-22",
+        "status": "pending",
+        "studentId": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "teacherId": "fXFqnMsyOgXPIILe0WpoVmoAIrj1",
+        "time": "11:00"
+      },
+      "-OOLbg7BCxZh4WOW6X3m": {
+        "date": "2025-04-22",
+        "message": "meeting",
+        "status": "Pending",
+        "studentId": "fXFqnMsyOgXPIILe0WpoVmoAIrj1",
+        "teacher": "shiv"
+      }
+    },
+    "messages": {
+      "-OO6j4z9Pg6DLgDW13TU": {
+        "from": "SdwbpW8WRNUtymsb8VR3GAHqHcw2",
+        "message": "Hello",
+        "timestamp": 1744960250444
+      },
+      "-OO7GwOTKjqp7hdFw6jE": {
+        "from": "i6v5BbIfiraPEvyhZvZO3T8IJs82",
+        "message": "hello"
+      }
+    },
+    "users": {
+      "9smKSRHOAceKDJ4uJBSOhLgFSzd2": {
+        "email": "smit@gmail.com",
+        "name": "smitesh",
+        "role": "teacher"
+      },
+      "RoirsnfTvxVjtyHbDdD95Xmp1vx1": {
+        "department": "Science",
+        "email": "shyam@gmail.com",
+        "name": "shyam",
+        "role": "teacher",
+        "subject": "Maths"
+      },
+      "SdwbpW8WRNUtymsb8VR3GAHqHcw2": {
+        "email": "ram@gmail.com",
+        "name": "ram",
+        "role": "student"
+      },
+      "fXFqnMsyOgXPIILe0WpoVmoAIrj1": {
+        "department": "college",
+        "email": "shiv@gmail.com",
+        "name": "shiv",
+        "role": "teacher",
+        "subject": "english"
+      },
+      "i6v5BbIfiraPEvyhZvZO3T8IJs82": {
+        "email": "kheniharsh@gmail.com",
+        "name": "harsh",
+        "role": "admin"
+      },
+      "stKm4p7V06PofhhLZ5UUizi4B7o2": {
+        "email": "siya@gmail.com",
+        "name": "siya",
+        "role": "teacher"
+      },
+      "yb22USx3HzL8ZsrTcPwpqxJZs2L2": {
+        "department": "commerce",
+        "email": "rahul@gmail.com",
+        "name": "Rahul",
+        "role": "teacher",
+        "subject": "account"
+      }
+    }
+  }
+}

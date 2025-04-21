@@ -1,0 +1,56 @@
+{
+  "rules": {
+    "student": {
+      "users": {
+        "$uid": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid"
+        },
+        ".read": "auth != null && root.child('student/users').child(auth.uid).child('role').val() === 'admin'",
+        ".write": "auth != null && root.child('student/users').child(auth.uid).child('role').val() === 'admin'"
+      },
+      "appointments": {
+        ".read": "auth != null",
+        "$appointmentId": {
+          ".write": "auth != null && (
+            root.child('student/users').child(auth.uid).child('role').val() === 'admin' || 
+            root.child('student/users').child(auth.uid).child('role').val() === 'teacher' || 
+            newData.child('studentId').val() === auth.uid
+          )",
+          "status": {
+            ".write": "auth != null && (
+              root.child('student/users').child(auth.uid).child('role').val() === 'admin' || 
+              root.child('student/users').child(auth.uid).child('role').val() === 'teacher'
+            )"
+          },
+          "teacherId": {
+            ".write": "false"
+          },
+          "date": {
+            ".write": "auth != null && newData.child('studentId').val() === auth.uid"
+          },
+          "time": {
+            ".write": "auth != null && newData.child('studentId').val() === auth.uid"
+          }
+        }
+      },
+      "messages": {
+        ".read": "auth != null && (
+          root.child('student/users').child(auth.uid).child('role').val() === 'admin' || 
+          root.child('student/users').child(auth.uid).child('role').val() === 'student' || 
+          root.child('student/users').child(auth.uid).child('role').val() === 'teacher'
+        )",
+        "$messageId": {
+          ".write": "auth != null && (
+            newData.child('from').val() === auth.uid || 
+            root.child('student/users').child(auth.uid).child('role').val() === 'admin'
+          )"
+        }
+      }
+    },
+    "teachers": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('student/users').child(auth.uid).child('role').val() === 'admin'"
+    }
+  }
+}
